@@ -52,51 +52,49 @@ npm run dev
 ### Project Documentation
 For Software:
 
-# Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+# Screenshots
+<img width="424" height="260" alt="image" src="https://github.com/user-attachments/assets/7cae52a3-78cf-4788-b722-36a124d4cde2" />
+<br>Alarm List and Editing Page<br><br>
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+<img width="329" height="498" alt="image" src="https://github.com/user-attachments/assets/6297126d-4296-451e-bb7a-0a4715d92d34" />
+<br>Alarm is Ringing, So we need to Convince it.<br><br>
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+<img width="294" height="467" alt="image" src="https://github.com/user-attachments/assets/3e8e2b69-2907-4780-a404-57e75b5eba09" />
+<br>Suresh Thinking<br><br>
+
+<img width="356" height="507" alt="image" src="https://github.com/user-attachments/assets/b6ec0562-c421-413e-8c6e-52720a967a78" />
+<br>Suresh mass Reply<br><br>
+
+
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+User → Excuse → Evaluation → Meme Reaction → Snooze (or not)!
+
+The alarm rings without a snooze/stop option.
+User must type (or later, speak) an excuse.
+An AI-based or rule-based logic evaluates creativity, logic, and emotion.
+A reaction clip of Suresh Krishna is displayed based on score.
+If the excuse is great, snooze is granted. If not, the alarm continues.
 
 For Hardware:
 
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+https://drive.google.com/file/d/11OIwZbvw_nHT6npmMJm6NyYnkhWPT_4H/view?usp=drivesdk
+<br>The Alarm Rings: When your set alarm time arrives, instead of a normal alarm screen with a snooze button, a special screen pops up.
+You Give an Excuse: This screen prompts you to type in an excuse for why you deserve 5 more minutes of sleep.
+AI Judgment: Your excuse is sent to the Google Gemini API, which has been instructed to act like the actor Suresh Krishna. The AI analyzes your excuse to decide if it's a good reason or a lame one.
+<br>The Verdict:
+Good Excuse: If the AI finds your excuse believable (like being sick or studying late), it gives an approving response, and the alarm snoozes for 5 minutes.
 
-# Additional Demos
-[Add any extra demo materials/links]
+Bad Excuse: If your excuse is weak or silly, the AI will give you a funny or angry retort in Suresh Krishna's style, and the alarm will continue to ring until you provide a better excuse.
+
+Essentially, it's a fun battle of wits against an AI to earn your snooze time.
+
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Ajai Abhraham Thomas: UI/UX/IDEA
+- RASAL: BACKEND, CODING PART
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
