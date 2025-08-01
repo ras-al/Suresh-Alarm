@@ -1,0 +1,201 @@
+/* Alarm.css */
+
+.alarm-card {
+  background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+  border-radius: 22px;
+  padding: 1.8rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 6px solid #f59e0b;
+  max-width: 950px;
+  margin: 0.8rem auto;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  animation: slideFadeIn 0.5s ease-in;
+}
+
+.alarm-card:hover {
+  transform: scale(1.02);
+  background-color: #2a2a2a;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+}
+
+.alarm-card.active-glow {
+  box-shadow: 0 0 16px 3px rgba(34, 197, 94, 0.5);
+}
+
+.alarm-card.pulsing {
+  animation: pulseGlow 1s infinite;
+}
+
+.alarm-card.disabled {
+  opacity: 0.6;
+  border-left-color: #444;
+}
+
+.alarm-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.alarm-time-label {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.time-display {
+  font-size: 3.25rem;
+  font-weight: 700;
+  color: #fefefe;
+  margin: 0;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.time-period {
+  font-size: 1.3rem;
+  color: #d1d5db;
+  text-transform: uppercase;
+}
+
+.alarm-days-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.day-indicator {
+  font-size: 0.85rem;
+  color: #a1a1aa;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 20px;
+  background-color: #333;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 4px #111;
+}
+
+.day-indicator.active {
+  background-color: #3b82f6;
+  color: white;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+}
+
+.alarm-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #666;
+  transition: 0.4s;
+  border-radius: 34px;
+  box-shadow: inset 0 0 6px #000;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #22c55e;
+  box-shadow: 0 0 6px #22c55e;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Delete/Trash Button */
+.delete-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #f87171;
+  font-size: 1.5rem;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.delete-button:hover {
+  transform: scale(1.15);
+  color: #ef4444;
+}
+
+.delete-button::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -1.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1f1f1f;
+  color: #fefefe;
+  padding: 5px 8px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.delete-button:hover::after {
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 12px rgba(34, 197, 94, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 12px rgba(34, 197, 94, 0.3);
+  }
+}

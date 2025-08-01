@@ -1,0 +1,150 @@
+/* Full-screen animated background */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1a1a2e);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* App Container with glass & glow effect */
+.app-container {
+  max-width: 520px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  padding: 2rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeInUp 0.8s ease-out;
+  transition: all 0.4s ease;
+}
+
+/* Fade in up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating header */
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: floatHeader 4s ease-in-out infinite;
+}
+
+.app-header h1 {
+  font-size: 2.7rem;
+  font-weight: 800;
+  color: #ffcc00;
+  text-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+}
+
+@keyframes floatHeader {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* Alarm list */
+.alarms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Neumorphic Input Fields */
+input, textarea {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-shadow: inset 2px 2px 5px rgba(255,255,255,0.05),
+              inset -3px -3px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
+}
+
+/* Glowing button */
+.add-alarm-btn {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffd700, #ff8c00);
+  color: #111;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
+  cursor: pointer;
+  align-self: center;
+  transition: all 0.4s ease;
+  animation: pulseGlow 2s infinite alternate;
+}
+
+.add-alarm-btn:hover {
+  transform: scale(1.05) translateY(-3px);
+  background: linear-gradient(135deg, #ffe066, #ffa500);
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.7);
+}
+
+@keyframes pulseGlow {
+  from {
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
+  }
+  to {
+    box-shadow: 0 0 25px rgba(255, 204, 0, 0.6);
+  }
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  color: #ccc;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .app-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .add-alarm-btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
