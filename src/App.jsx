@@ -88,6 +88,11 @@ function App() {
     setShowForm(false);
   };
 
+  const handleEdit = (alarm) => {
+    setEditingAlarm(alarm);
+    setShowForm(true);
+  };
+
   const handleDelete = async (id) => {
     if (!userId) return;
     await deleteDoc(doc(db, 'users', userId, 'alarms', id));
