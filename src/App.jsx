@@ -106,7 +106,7 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>Snoozed by Suresh 🛏️</h1>
+        <h1>Snoozed by Suresh</h1>
         <p>Your alarm that judges your excuses.</p>
       </header>
 
