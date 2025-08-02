@@ -37,10 +37,9 @@ For Software:
 # Installation
 
 # Clone the repository
-git clone https://github.com/ras-al/suresh-alarm-app
-
+git clone https://github.com/ras-al/Suresh-Alarm
 # Navigate to the project directory
-cd snoozed-by-suresh
+cd Suresh-Alarm
 
 # Install dependencies
 npm install
